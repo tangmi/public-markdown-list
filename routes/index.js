@@ -73,9 +73,21 @@ exports.single = function(req, res) {
 };
 
 exports.external = function(req, res) {
-	console.log("Downloading " + req.params.url);
+	var url = new Buffer(req.params.url, 'base64').toString('ascii');
 
-	var request = http.get(req.params.url, function(response) {
+	var filedata = {
+		name: url,
+		size: 0,
+		modified: null
+	};
+
+	console.log("Downloading " + url);
+
+	var request = http.get(url, function(response) {
+
+		console.log("Downloading " + url);
+
+
 		var output = "";
 		response.setEncoding();
 		response.on('data', function(data) {
@@ -85,20 +97,33 @@ exports.external = function(req, res) {
 			try {
 				output = marked(output);
 			} catch(e) {
-				output = "No file \"" + req.params.url + "\" found.";
+				output = "No file \"" + url + "\" found.";
 			}
 
 			filedata = {
-				name: req.params.url,
+				name: url,
 				size: output.length,
 				modified: null
 			};
 
-			res.render('index', { title: req.params.url, page: "single", output: output, file: filedata });
+			res.render('index', { title: url, page: "single", output: output, file: filedata });
 		});
 
+	}).on('error', function(e) {
+		res.render('index', { title: url, page: "single", output: "Resource couldn't be loaded.", file: filedata });
 	});
 
-	
 
+};
+
+exports.helper = function(req, res) {
+	res.render('helper');
+};
+
+exports.base64 = {};
+exports.base64.encode = function(req, res) {
+	res.send(new Buffer(req.params.string).toString('base64'));
+};
+exports.base64.decode = function(req, res) {
+	res.send(new Buffer(req.params.string, 'base64').toString('ascii'));
 };

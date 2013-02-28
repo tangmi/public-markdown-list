@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>url helper</title>
+</head>
+<style>
+#input, #output {
+	width: 100%;
+	padding: 1em;
+	margin: 1em 0;
+	display: block;
+}
+</style>
+<body>
+	<h3>Input markdown resource url here:</h3>
+	<input id="input" type="text">
+
+	<h3>Get rendered link:</h3>
+	<input id="output" type="text" onclick="this.focus();this.select();">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$("#input").on('change', function(event) {
+			var url = $("#input").val();
+			if(url != "") {
+				
+				if(url.indexOf("https") == 0) {				
+					url = url.replace("https", "http");
+				}
+
+				var url = encodeURIComponent(url);
+				$.ajax("/base64/encode/" + url, {
+					complete: function(data) {
+						$("#output").val( location.hostname + (location.port != 80 ? ":" + location.port : "") + "/render/" + data.responseText)
+					}
+				});
+			}
+		});
+	});
+	</script>
+</body>
+</html>
