@@ -1,6 +1,8 @@
 # On confidence (and arrogance)
 
-Hi Tyler. I honestly don't have much to say on this subject, because I've never seriously thought about it. Here's a link to your blog post, because I care about shoutouts: [Dunning-Kruger](https://medium.com/i-m-h-o/86f910e35a8f).
+> Hi Tyler. I honestly don't have much to say on this subject, because I've never seriously thought about it. Here's a link to your blog post, because I care about shoutouts: [Dunning-Kruger](https://medium.com/i-m-h-o/86f910e35a8f).
+
+This is some text, with some `inline code`. Woooooo.
 
 ## Confidence and arrogance
 
@@ -48,3 +50,15 @@ Though you don't need to hear somebody's claims on their abilities and test them
 ### When you can be confident
 
 I'm getting tired of writing, but pretty much what I'm trying to say is that *arrogance and confidence are essentially the same thing until you prove it's one or the other* by failing or succeeding to meet your claims. I'm also saying you can be as arrogant as you want because you can prove that you're capable and prove to haters that you were actually being confident. Or not, because you don't care about what the haters think because they're hate isn't really useful to anybody.
+
+# h1
+
+## h2
+
+### h3
+
+#### h4
+
+##### h5
+
+###### h6

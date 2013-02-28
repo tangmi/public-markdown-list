@@ -1,4 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 
+//these have to be decalred before-hand
+$base-font-size: 18px;
+$base-line-height: 18px * 1.5;
+$relative-font-sizing: false;
+
+@import "compass/reset";
+@import "compass/typography";
+
+$light-gray: rgb(222, 222, 222);
+$dark-gray: darken($light-gray, 30%);
+$code-back: lighten($light-gray, 10%);
+$code-border: darken($light-gray, 10%);
 
 body {
 	margin: 0;
@@ -34,13 +49,15 @@ a {
 	$padding-sides: 50px;
 	#header {
 		padding: 0.69em $padding-sides;
+		margin-bottom: 1em;
+
 		
 		text-align: right;
-		$header-color: rgb(222, 222, 222);
+		$header-color: $light-gray;
 		background: $header-color;
 
 		// font-style: oblique;
-		color: darken($header-color, 30%);
+		color: $dark-gray;
 
 		.filename {
 			float: left;
@@ -56,10 +73,10 @@ a {
 		}
 	}
 	#markdown {
-		padding: 1em $padding-sides;
-
+		padding: 0 $padding-sides;
 	}
 
-	@import "markdown.scss";
 
 }
+
+@import "markdown.scss";

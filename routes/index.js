@@ -30,7 +30,7 @@ exports.index = function(req, res) {
 			});
 		}
 
-		res.render('index', { page: "list", msg: err, output: output });
+		res.render('index', { title: "list", page: "list", msg: err, output: output });
 
 	});
 
@@ -63,7 +63,7 @@ exports.single = function(req, res) {
 			};
 		}
 
-		res.render('index', { page: "single", msg: err, output: output, file: filedata });
+		res.render('index', { title: req.params.filename, page: "single", msg: err, output: output, file: filedata });
 
 	});
 };

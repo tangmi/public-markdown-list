@@ -1,0 +1,110 @@
+@include establish-baseline();
+
+#markdown {
+	// @include debug-vertical-alignment();
+
+	* {
+		font-family: "PT Serif", serif;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "PT Sans", sans-serif;
+		font-weight: 700;
+
+	}
+	h1 {
+		font-weight: 800;
+		@include adjust-font-size-to($base-font-size * 2.5);
+		@include margin-leader(4 / 2.5);
+		@include margin-trailer(1 / 2.5);
+	}
+	h2 {
+		@include adjust-font-size-to($base-font-size * 2.0);
+		@include margin-leader(0.5);
+		@include margin-trailer(0.5);
+	}
+	h3 {
+		@include adjust-font-size-to($base-font-size * 1.5);
+		@include margin-leader(0);
+		@include margin-trailer(0);
+	}
+
+	h4, h5, h6 {
+		@include adjust-font-size-to($base-font-size * 1.0);
+
+	}
+
+
+	p, blockquote, pre, pre > code {
+		@include adjust-font-size-to($base-font-size * 1.0);
+		@include margin-leader(1);
+		@include margin-trailer(1);
+	}
+	
+	h3 + p {
+		@include margin-leader(0);
+	}
+
+	blockquote {
+		border-left: 10px solid $light-gray;
+		padding-left: 1em;
+		margin-left: 0;
+	}
+
+	ul, ol {
+		@include adjust-font-size-to($base-font-size * 1.0);
+
+		@include margin-leader(1);
+		@include margin-trailer(1);
+
+		padding-left: 2em;
+
+		list-style: disc;
+
+		li {
+			@include margin-leader(0);
+			@include margin-trailer(0);
+		}
+
+		//this line is just for nested lists
+		ul, li {
+			@include margin-leader(0);
+			@include margin-trailer(0);
+		}
+	}
+
+	hr {
+		border: 0;
+		height: 0;
+		border-bottom: 4px solid $light-gray;
+		margin: 0 0 -4px 0;
+	}
+
+	
+	pre, code {
+		font-family: 'Source Code Pro', monospace;
+	}
+
+	pre {
+		@include rhythm-borders(1px, 1);
+		background-color: $code-back;
+		border-color: $code-border;
+		border-radius: 3px;
+	}
+
+	code {
+		@include rhythm-borders(1px, 0);
+		background-color: $code-back;
+		border-color: $code-border;
+		border-radius: 3px;
+		padding-left: 0.5ch;
+		padding-right: 0.5ch;
+	}
+
+	pre > code {
+		background-color: none;
+		border: none;
+		padding: 0;
+	}
+
+}
