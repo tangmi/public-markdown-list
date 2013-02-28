@@ -25,7 +25,7 @@
 		$("#input").on('change', function(event) {
 			var url = $("#input").val();
 			if(url != "") {
-				
+
 				if(url.indexOf("https") == 0) {				
 					url = url.replace("https", "http");
 				}
@@ -33,7 +33,7 @@
 				var url = encodeURIComponent(url);
 				$.ajax("/base64/encode/" + url, {
 					complete: function(data) {
-						$("#output").val( location.hostname + (location.port != 80 ? ":" + location.port : "") + "/render/" + data.responseText)
+						$("#output").val( location.hostname + ((location.port != 80 && location.port != "") ? (":" + location.port) : "") + "/render/" + data.responseText)
 					}
 				});
 			}
