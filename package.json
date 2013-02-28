@@ -10,6 +10,7 @@
 	"dependencies": {
 		"express": ">=2.2.0",
 		"ejs": "*",
-		"marked": "*"
+		"marked": "*",
+		"dbox": "0.6.x"
 	}
 }

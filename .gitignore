@@ -1,3 +1,9 @@
+### Hide my dropbox api stuff ###
+# these files simply have the public key and private key on one line, separated by a colon (':')
+dropbox_keys
+dropbox_tokens
+
+
 ### SASS css ###
 .sass-cache/
 

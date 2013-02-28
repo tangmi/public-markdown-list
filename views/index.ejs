@@ -29,7 +29,7 @@
 			<%= file.name %>
 			</div>
 			<div class="meta">
-			last modified <%= file.modified %>, <%= file.size %> bytes
+			<% if(file.modified) { %>last modified <%= file.modified %>,<% } %> <%= file.size %> bytes
 			</div>
 		</div>
 
