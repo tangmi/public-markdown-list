@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<title>list</title>
+	<link rel='stylesheet' href='/css/style.css'>
+</head>
+<body>
+	
+	<div id="tang">
+		
+		<div id="header">
+			header, yo
+		</div>
+		<div id="content">
+
+			<% if(msg) { %>
+			<div class="msg">
+				<%= msg %>
+			</div>
+
+			<% } %>
+			<div class="output">
+
+				<% if(page == "list") { %>
+				<% if(output) { %>
+				<ul>
+					<% for(var i = 0; i < output.length; i++) { %>
+					<li><a href="/<%= output[i] %>"><%= output[i] %></a></li>
+					<% } %>
+				</ul>
+				<% } %>
+				<% } else if(page == "single") { %>
+				<%= output %>
+				<!-- <a href="/">back to list</a> -->
+				<% } %>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
