@@ -21,7 +21,6 @@
 
 			<% } %>
 			<div class="output">
-
 				<% if(page == "list") { %>
 				<% if(output) { %>
 				<ul>
@@ -31,7 +30,7 @@
 				</ul>
 				<% } %>
 				<% } else if(page == "single") { %>
-				<%= output %>
+				<%- output %>
 				<!-- <a href="/">back to list</a> -->
 				<% } %>
 			</div>
