@@ -9,4 +9,28 @@ a {
 	color: #00B7FF;
 }
 
-@import "markdown.scss";
+#tang {
+
+}
+
+#content {
+	
+
+	.msg {
+
+	}
+
+	.output {
+		
+
+		&.list {
+
+		}
+		&.single {
+			
+		}
+
+		@import "markdown.scss";
+
+	}
+}

@@ -6,35 +6,30 @@
 	<link rel='stylesheet' href='/css/style.css'>
 </head>
 <body>
-	
-	<div id="tang">
-		
-		<div id="header">
-			header, yo
-		</div>
-		<div id="content">
 
-			<% if(msg) { %>
-			<div class="msg">
-				<%= msg %>
-			</div>
-
+	<% if(page == "list") { %>
+	<% if(output) { %>
+	<div id="list">
+		<ul>
+			<% for(var i = 0; i < output.length; i++) { %>
+			<li><a href="/<%= output[i].name %>"><%= output[i].name %></a> <%= output[i].size %> bytes, created <%= output[i].modified %></li>
 			<% } %>
-			<div class="output">
-				<% if(page == "list") { %>
-				<% if(output) { %>
-				<ul>
-					<% for(var i = 0; i < output.length; i++) { %>
-					<li><a href="/<%= output[i] %>"><%= output[i] %></a></li>
-					<% } %>
-				</ul>
-				<% } %>
-				<% } else if(page == "single") { %>
-				<%- output %>
-				<!-- <a href="/">back to list</a> -->
-				<% } %>
-			</div>
-		</div>
+		</ul>
 	</div>
+	<% } %>
+
+
+
+	<% } else if(page == "single") { %>
+
+	<div id="header">
+		<%= file.size %> bytes, <%= file.modified %>
+	</div>
+
+	<%- output %>
+	<!-- <a href="/">back to list</a> -->
+	<% } %>
+
+
 </body>
 </html>
