@@ -1,1 +1,1 @@
-body{padding:50px;font:14px "Lucida Grande", Helvetica, Arial, sans-serif}a{color:#00B7FF}
+body{margin:0;font:14px "Lucida Grande", Helvetica, Arial, sans-serif}a{color:#00B7FF}#content{padding-bottom:5em}#content #header{padding:0.69em 50px;text-align:right;background:#dedede;color:#929292}#content #header .filename{float:left}#content #header .meta{float:right}#content #header:after{content:" ";font-size:1px;display:block;clear:both}#content #markdown{padding:1em 50px}

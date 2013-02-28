@@ -18,7 +18,7 @@ exports.index = function(req, res) {
 
 		var output = [];
 
-		for(i in files) {
+		for(var i in files) {
 			var file = files[i];
 
 
@@ -28,7 +28,6 @@ exports.index = function(req, res) {
 				size: stats.size,
 				modified: stats.mtime
 			});
-			
 		}
 
 		res.render('index', { page: "list", msg: err, output: output });
@@ -45,12 +44,26 @@ exports.single = function(req, res) {
 		try {
 			output = marked(data);
 		} catch(e) {
-			output = "No file \"" + req.params.filename + "\" found";
+			output = "No file \"" + req.params.filename + "\" found.";
 		}
 
-		var stats = fs.statSync(basedir + req.params.filename);
+		var filedata = {};
+		try {
+			var stats = fs.statSync(basedir + req.params.filename);
+			filedata = {
+				name: req.params.filename,
+				size: stats.size,
+				modified: new Date(stats.mtime).toDateString()
+			};
+		} catch(e) {
+			filedata = {
+				name: "file not found",
+				size: 0,
+				modified: "n/a"
+			};
+		}
 
-		res.render('index', { page: "single", msg: err, output: output, file: {size: stats.size, modified: stats.mtime} });
+		res.render('index', { page: "single", msg: err, output: output, file: filedata });
 
 	});
 };

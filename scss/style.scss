@@ -1,7 +1,7 @@
 
 
 body {
-	padding: 50px;
+	margin: 0;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -15,22 +15,51 @@ a {
 
 #content {
 	
+	padding-bottom: 5em;
 
-	.msg {
+	//List view
+	#list {
+	
+		ul {
 
+			li {
+
+			}
+		}
 	}
+	
 
-	.output {
+
+	// Markdown single page
+	$padding-sides: 50px;
+	#header {
+		padding: 0.69em $padding-sides;
 		
+		text-align: right;
+		$header-color: rgb(222, 222, 222);
+		background: $header-color;
 
-		&.list {
+		// font-style: oblique;
+		color: darken($header-color, 30%);
 
+		.filename {
+			float: left;
 		}
-		&.single {
-			
+		.meta {
+			float: right;
 		}
-
-		@import "markdown.scss";
+		&:after {
+			content: " ";
+			font-size: 1px;
+			display: block;
+			clear: both;
+		}
+	}
+	#markdown {
+		padding: 1em $padding-sides;
 
 	}
+
+	@import "markdown.scss";
+
 }
