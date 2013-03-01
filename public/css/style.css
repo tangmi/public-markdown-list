@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
-/* line 17, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,45 +23,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -109,27 +109,27 @@ a {
   padding: 0 50px;
 }
 
-/* line 61, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 61, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
   font-size: 112.5%;
 }
 
-/* line 64, ../../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 64, /Users/michael/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 18px;
   line-height: 27px;
 }
 
-/* line 6, ../../scss/_markdown.scss */
+/* line 6, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown * {
   font-family: "PT Serif", serif;
 }
-/* line 10, ../../scss/_markdown.scss */
+/* line 10, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown h1, #markdown h2, #markdown h3, #markdown h4, #markdown h5, #markdown h6 {
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
 }
-/* line 15, ../../scss/_markdown.scss */
+/* line 15, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown h1 {
   font-weight: 800;
   font-size: 45px;
@@ -137,73 +137,80 @@ html {
   margin-top: 43px;
   margin-bottom: 10px;
 }
-/* line 21, ../../scss/_markdown.scss */
+/* line 21, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown h2 {
   font-size: 36px;
   line-height: 54px;
   margin-top: 13px;
   margin-bottom: 13px;
 }
-/* line 26, ../../scss/_markdown.scss */
+/* line 26, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown h3 {
   font-size: 27px;
   line-height: 54px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-/* line 32, ../../scss/_markdown.scss */
+/* line 32, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown h4, #markdown h5, #markdown h6 {
   font-size: 18px;
   line-height: 27px;
 }
-/* line 38, ../../scss/_markdown.scss */
+/* line 38, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown p, #markdown blockquote, #markdown pre, #markdown pre > code {
   font-size: 18px;
   line-height: 27px;
   margin-top: 27px;
   margin-bottom: 27px;
 }
-/* line 44, ../../scss/_markdown.scss */
+/* line 44, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown h3 + p {
   margin-top: 0px;
 }
-/* line 48, ../../scss/_markdown.scss */
+/* line 48, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown blockquote {
   border-left: 10px solid #dedede;
   padding-left: 1em;
   margin-left: 0;
 }
-/* line 54, ../../scss/_markdown.scss */
+/* line 54, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
+#markdown ul {
+  list-style: disc;
+}
+/* line 58, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
+#markdown ol {
+  list-style: decimal;
+}
+/* line 62, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown ul, #markdown ol {
   font-size: 18px;
   line-height: 27px;
   margin-top: 27px;
   margin-bottom: 27px;
   padding-left: 2em;
-  list-style: disc;
 }
-/* line 64, ../../scss/_markdown.scss */
+/* line 70, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown ul li, #markdown ol li {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-/* line 70, ../../scss/_markdown.scss */
+/* line 76, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown ul ul, #markdown ul li, #markdown ol ul, #markdown ol li {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-/* line 76, ../../scss/_markdown.scss */
+/* line 82, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown hr {
   border: 0;
   height: 0;
   border-bottom: 4px solid #dedede;
   margin: 0 0 -4px 0;
 }
-/* line 84, ../../scss/_markdown.scss */
+/* line 90, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown pre, #markdown code {
   font-family: 'Source Code Pro', monospace;
 }
-/* line 88, ../../scss/_markdown.scss */
+/* line 94, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown pre {
   border-style: solid;
   border-width: 1px;
@@ -212,7 +219,7 @@ html {
   border-color: #c5c5c5;
   border-radius: 3px;
 }
-/* line 95, ../../scss/_markdown.scss */
+/* line 101, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown code {
   border-style: solid;
   border-width: 1px;
@@ -223,7 +230,7 @@ html {
   padding-left: 0.5ch;
   padding-right: 0.5ch;
 }
-/* line 104, ../../scss/_markdown.scss */
+/* line 110, /Users/michael/Documents/GitHub/public-markdown-list/scss/_markdown.scss */
 #markdown pre > code {
   background-color: none;
   border: none;

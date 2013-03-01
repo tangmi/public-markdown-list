@@ -51,6 +51,14 @@
 		margin-left: 0;
 	}
 
+	ul {
+		list-style: disc;
+	}
+
+	ol {
+		list-style: decimal;
+	}
+
 	ul, ol {
 		@include adjust-font-size-to($base-font-size * 1.0);
 
@@ -58,8 +66,6 @@
 		@include margin-trailer(1);
 
 		padding-left: 2em;
-
-		list-style: disc;
 
 		li {
 			@include margin-leader(0);
