@@ -54,5 +54,27 @@
 	})();
 	</script>
 	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<% if(file.name && file.name == "index.md") { %>
+	<script>
+	$(document).ready(function() {
+		$("#input").on("keyup", function(event) {
+			var url = $("#input").val();
+			if(url != "") {
+				if(url.indexOf("https") == 0) {	
+					url = url.replace("https", "http");
+				}
+				var url = encodeURIComponent(url);
+				$.ajax("/base64/encode/" + url, {
+					complete: function(data) {
+						$("#output").val( location.hostname + ((location.port != 80 && location.port != "") ? (":" + location.port) : "") + "/render/" + data.responseText)
+					}
+				});
+			}
+		});
+	});
+	</script>
+	<% } %>
 </body>
 </html>

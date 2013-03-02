@@ -11,7 +11,9 @@ var http = require('http');
 
 exports.index = function(req, res) {
 
-	var outFiles = "nothing";
+	res.redirect("/index.md");
+
+	/*var outFiles = "nothing";
 
 	console.log("Requested " + req.route.path);
 
@@ -34,7 +36,7 @@ exports.index = function(req, res) {
 
 		res.render('index', { title: "list", page: "list", output: output });
 
-	});
+	});*/
 
 
 };
@@ -48,7 +50,7 @@ exports.single = function(req, res) {
 		try {
 			output = marked(data);
 		} catch(e) {
-			output = "No file \"" + req.params.filename + "\" found.";
+			output = "<p>No file \"" + req.params.filename + "\" found.</p>";
 		}
 
 		var filedata = {};
@@ -77,7 +79,7 @@ exports.external = function(req, res) {
 
 	var filedata = {
 		name: url,
-		url: url,
+		url: null,
 		size: 0,
 		modified: null
 	};
@@ -98,7 +100,7 @@ exports.external = function(req, res) {
 			try {
 				output = marked(output);
 			} catch(e) {
-				output = "No file \"" + url + "\" found.";
+				output = "<p>No file \"" + url + "\" found.</p>";
 			}
 
 			filedata = {
