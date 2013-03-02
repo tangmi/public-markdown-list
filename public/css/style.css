@@ -129,8 +129,8 @@ html {
   line-height: 27px;
 }
 
-/* line 6, ../../scss/_markdown.scss */
-#markdown * {
+/* line 3, ../../scss/_markdown.scss */
+#markdown {
   font-family: "PT Serif", serif;
 }
 /* line 10, ../../scss/_markdown.scss */
@@ -217,7 +217,7 @@ html {
 }
 /* line 90, ../../scss/_markdown.scss */
 #markdown pre, #markdown code {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace !important;
 }
 /* line 94, ../../scss/_markdown.scss */
 #markdown pre {

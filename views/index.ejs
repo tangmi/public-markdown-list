@@ -26,14 +26,14 @@
 
 		<div id="header">
 			<div class="filename">
-			<% if(file.url) { %>
-			<a href="<%= file.url %>" title="View raw file"><%= file.name %></a>
-			<% } else { %>
-			<%= file.name %>
-			<% } %>
+				<% if(file.url) { %>
+				<a href="<%= file.url %>" title="View raw file"><%= file.name %></a>
+				<% } else { %>
+				<%= file.name %>
+				<% } %>
 			</div>
 			<div class="meta">
-			<% if(file.modified) { %>last modified <%= file.modified %>,<% } %> <%= file.size %> bytes
+				<% if(file.modified) { %>last modified <%= file.modified %>,<% } %> <%= file.size %> bytes
 			</div>
 		</div>
 
@@ -44,6 +44,15 @@
 		</div>
 
 	</div>
-
+	<script>
+	(function() {
+		var elements = document.getElementsByTagName('pre')
+		for(var i = 0; i < elements.length; i++) {
+			elements[i].className = "prettyprint";
+			console.log(elements[i]);
+		}
+	})();
+	</script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 </body>
 </html>
