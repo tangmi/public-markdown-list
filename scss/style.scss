@@ -47,7 +47,7 @@ a {
 
 	// Markdown single page
 	$padding-sides: 50px;
-	#header {
+	& > #header {
 		padding: 0.69em $padding-sides;
 		margin-bottom: 1em;
 

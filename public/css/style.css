@@ -82,7 +82,7 @@ a {
   padding-bottom: 5em;
 }
 /* line 50, ../../scss/style.scss */
-#content #header {
+#content > #header {
   padding: 0.69em 50px;
   margin-bottom: 1em;
   text-align: right;
@@ -90,24 +90,24 @@ a {
   color: #929292;
 }
 /* line 62, ../../scss/style.scss */
-#content #header .filename {
+#content > #header .filename {
   float: left;
 }
 /* line 67, ../../scss/style.scss */
-#content #header .filename a:link, #content #header .filename a:visited {
+#content > #header .filename a:link, #content > #header .filename a:visited {
   color: #929292;
   text-decoration: none;
 }
 /* line 71, ../../scss/style.scss */
-#content #header .filename a:hover, #content #header .filename a:active {
+#content > #header .filename a:hover, #content > #header .filename a:active {
   text-decoration: underline;
 }
 /* line 76, ../../scss/style.scss */
-#content #header .meta {
+#content > #header .meta {
   float: right;
 }
 /* line 79, ../../scss/style.scss */
-#content #header:after {
+#content > #header:after {
   content: " ";
   font-size: 1px;
   display: block;
