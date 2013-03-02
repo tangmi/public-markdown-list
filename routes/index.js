@@ -77,6 +77,7 @@ exports.external = function(req, res) {
 
 	var filedata = {
 		name: url,
+		url: url,
 		size: 0,
 		modified: null
 	};
@@ -102,6 +103,7 @@ exports.external = function(req, res) {
 
 			filedata = {
 				name: url,
+				url: url,
 				size: output.length,
 				modified: null
 			};

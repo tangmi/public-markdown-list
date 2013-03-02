@@ -26,7 +26,11 @@
 
 		<div id="header">
 			<div class="filename">
+			<% if(file.url) { %>
+			<a href="<%= file.url %>" title="View raw file"><%= file.name %></a>
+			<% } else { %>
 			<%= file.name %>
+			<% } %>
 			</div>
 			<div class="meta">
 			<% if(file.modified) { %>last modified <%= file.modified %>,<% } %> <%= file.size %> bytes

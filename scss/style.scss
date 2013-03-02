@@ -61,6 +61,17 @@ a {
 
 		.filename {
 			float: left;
+
+			a {
+				
+				&:link, &:visited {
+					color: $dark-gray;
+					text-decoration: none;
+				}
+				&:hover, &:active {
+					text-decoration: underline;
+				}
+			}
 		}
 		.meta {
 			float: right;
