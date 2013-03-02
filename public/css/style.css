@@ -204,7 +204,7 @@ html {
   margin-bottom: 0px;
 }
 /* line 76, ../../scss/_markdown.scss */
-#markdown ul ul, #markdown ul li, #markdown ol ul, #markdown ol li {
+#markdown ul ul, #markdown ul ol, #markdown ol ul, #markdown ol ol {
   margin-top: 0px;
   margin-bottom: 0px;
 }

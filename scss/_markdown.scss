@@ -73,7 +73,7 @@
 		}
 
 		//this line is just for nested lists
-		ul, li {
+		ul, ol {
 			@include margin-leader(0);
 			@include margin-trailer(0);
 		}
