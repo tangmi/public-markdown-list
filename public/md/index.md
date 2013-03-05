@@ -18,3 +18,7 @@ This is a quick and simple web service that is meant to render Markdown files pu
 	display: block;
 }
 </style>
+
+### Notes
+
+This service uses [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown), though it ignores languages specified in fenced code blocks (```` ``` ````) and just makes an automatic guess for syntax highlighting. Though, if possible, it is better practice to specify the language in case you want to use your Markdown on GitHub.
