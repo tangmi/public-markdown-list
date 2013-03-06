@@ -1,3 +1,7 @@
+String.prototype.contains = function(str) {
+	return this.indexOf(str) >= 0;
+};
+
 
 /*
 * GET home page.
@@ -10,37 +14,10 @@ var url = require('url');
 var http = require('http');
 
 exports.index = function(req, res) {
-
 	res.redirect("/index.md");
-
-	/*var outFiles = "nothing";
-
-	console.log("Requested " + req.route.path);
-
-
-	fs.readdir(basedir,  function(err, files) {
-
-		var output = [];
-
-		for(var i in files) {
-			var file = files[i];
-
-
-			var stats = fs.statSync(basedir + file);
-			output.push({
-				name: file,
-				size: stats.size,
-				modified: stats.mtime
-			});
-		}
-
-		res.render('index', { title: "list", page: "list", output: output });
-
-	});*/
-
-
 };
 
+//TODO remove this?
 exports.single = function(req, res) {
 	console.log("Requested " + req.route.path);
 
@@ -84,37 +61,43 @@ exports.external = function(req, res) {
 		modified: null
 	};
 
-	console.log("Downloading " + url);
-
 	var request = http.get(url, function(response) {
 
 		console.log("Downloading " + url);
 
+		console.log(response.headers['content-type']);
 
-		var output = "";
-		response.setEncoding();
-		response.on('data', function(data) {
-			output += data;
-		}).on('end', function() {
+		if(response.headers['content-type'].contains("text/plain") || response.headers['content-type'].contains('markdown')) {
 
-			try {
-				output = marked(output);
-			} catch(e) {
-				output = "<p>No file \"" + url + "\" found.</p>";
-			}
+			var output = "";
 
-			filedata = {
-				name: url,
-				url: url,
-				size: output.length,
-				modified: null
-			};
+			response.setEncoding();
+			response.on('data', function(data) {
+				output += data;
+			}).on('end', function() {
 
-			res.render('index', { title: url, page: "single", output: output, file: filedata });
-		});
+				try {
+					output = marked(output);
+				} catch(e) {
+					output = "<p>No file \"" + url + "\" found.</p>";
+				}
+
+				filedata = {
+					name: url,
+					url: url,
+					size: output.length,
+					modified: null
+				};
+
+				res.render('index', { title: url, page: "single", output: output, file: filedata });
+			});
+
+		} else {
+			res.render('index', { title: url, page: "single", output: "<p>Resource is not a Markdown document.</p>", file: filedata });
+		}
 
 	}).on('error', function(e) {
-		res.render('index', { title: url, page: "single", output: "Resource couldn't be loaded.", file: filedata });
+		res.render('index', { title: url, page: "single", output: "<p>Resource couldn't be loaded.</p>", file: filedata });
 	});
 
 
