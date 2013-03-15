@@ -10,7 +10,6 @@ String.prototype.contains = function(str) {
 var fs = require('fs');
 var basedir = './public/md/';
 var marked = require("marked");
-var url = require('url');
 var http = require('http');
 
 exports.index = function(req, res) {
